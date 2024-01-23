@@ -14,6 +14,6 @@ advanced algorithms such as quicksort, heapsort or merge sort.
 
 **Time complexity:**
 
-| Best | Average | Worst |
-|:----:|:-------:|:-----:|
-| O(n) | O(n^2)  | O(n^2)|
+|  Best  | Average |  Worst  |
+|:------:|:-------:|:-------:|
+| O(n)   | O(n^2)  | O(n^2)  |
