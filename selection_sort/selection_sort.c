@@ -1,10 +1,5 @@
 #include "selection_sort.h"
-
-void swap(int *a, int *b) {
-    int tmp = *a;
-    *a = *b;
-    *b = tmp; 
-}
+#include "../utils/utils.h"
 
 void selection_sort(int *arr, int n) {
     for (int i = 0; i < n - 1; i++) {
