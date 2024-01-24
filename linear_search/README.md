@@ -5,7 +5,7 @@ checks each element until a match is found or the whole list is searched.
 
 ## Example
 
-![Insertion Sort Example](https://slaystudy.com/wp-content/uploads/2020/05/linearsearchitr.gif)
+![Linear Search Example](https://slaystudy.com/wp-content/uploads/2020/05/linearsearchitr.gif)
 
 ## Complexity
 

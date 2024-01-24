@@ -9,5 +9,6 @@
 
 // Search
 #include "linear_search/linear_search.h"
+#include "binary_search/binary_search.h"
 
 #endif // TEST_H
