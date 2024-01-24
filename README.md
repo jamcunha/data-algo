@@ -7,6 +7,7 @@ This repository contains common algorithms and data structures implementations.
 - Sorting
     - [Insertion Sort](./insertion_sort/README.md)
     - [Selection Sort](./selection_sort/README.md)
+    - [Merge Sort](./merge_sort/README.md)
 
 - Searching
     - [Linear Search](./linear_search/README.md)
