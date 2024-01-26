@@ -14,6 +14,7 @@ This repository contains common algorithms and data structures implementations.
     - [Selection Sort](./selection_sort/README.md)
     - [Merge Sort](./merge_sort/README.md)
     - [Bubble Sort](./bubble_sort/README.md)
+    - [Heap Sort](./heap_sort/README.md)
 
 - Searching
     - [Linear Search](./linear_search/README.md)
