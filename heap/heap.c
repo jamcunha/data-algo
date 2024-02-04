@@ -91,12 +91,11 @@ bool heap_insert(heap_t* heap, int value) {
     return true;
 }
 
-bool heap_pop(heap_t* heap, int* value) {
+bool heap_pop(heap_t* heap) {
     if (heap->size == 0) {
         return false;
     }
 
-    *value = heap->data[0];
     heap->data[0] = heap->data[heap->size - 1];
     heap->size--;
 

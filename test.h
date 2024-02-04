@@ -18,5 +18,6 @@
 
 // Heap
 #include "heap/heap.h"
+#include "priority_queue/priority_queue.h"
 
 #endif // TEST_H

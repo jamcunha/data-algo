@@ -27,7 +27,7 @@ void heapify_up(heap_t* heap, int index);
 
 bool heap_insert(heap_t* heap, int value);
 
-bool heap_pop(heap_t* heap, int* value);
+bool heap_pop(heap_t* heap);
 
 int heap_peek(heap_t* heap);
 
