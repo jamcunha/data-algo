@@ -11,6 +11,7 @@
 #include "heap_sort/heap_sort.h"
 #include "quick_sort/quick_sort.h"
 #include "counting_sort/counting_sort.h"
+#include "radix_sort/radix_sort.h"
 
 // Search
 #include "linear_search/linear_search.h"
