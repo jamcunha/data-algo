@@ -1,14 +1,5 @@
 # Algorithms and Data Structures
 
----
-
-## TODO: better file structure
-- A test file for each topic
-- A better file structure (ex. algorithms/sorting/bubble\_sort, data\_structures/heap, etc)
-- Have a better Makefile
-
----
-
 This repository contains common algorithms and data structures implementations.
 
 ## Algorithms
@@ -22,6 +13,7 @@ This repository contains common algorithms and data structures implementations.
     - [Quick Sort](./quick_sort/README.md)
     - [Counting Sort](./counting_sort/README.md)
     - [Radix Sort](./radix_sort/README.md)
+    - [Bucket Sort](./bucket_sort/README.md)
 
 - Searching
     - [Linear Search](./linear_search/README.md)
