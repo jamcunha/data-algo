@@ -1,6 +1,10 @@
 #include "heap_sort.h"
 
-#include "../utils/utils.h"
+static void swap(int* a, int* b) {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
 
 void heap_sort_heapify(int* array, int size, int index) {
     int left = index * 2 + 1;
