@@ -4,24 +4,24 @@
 // Algorithms
 
 // Sort
-#include "insertion_sort/insertion_sort.h"
-#include "selection_sort/selection_sort.h"
-#include "merge_sort/merge_sort.h"
-#include "bubble_sort/bubble_sort.h"
-#include "heap_sort/heap_sort.h"
-#include "quick_sort/quick_sort.h"
-#include "counting_sort/counting_sort.h"
-#include "radix_sort/radix_sort.h"
-#include "bucket_sort/bucket_sort.h"
+#include "algorithms/sort/insertion_sort/insertion_sort.h"
+#include "algorithms/sort/selection_sort/selection_sort.h"
+#include "algorithms/sort/merge_sort/merge_sort.h"
+#include "algorithms/sort/bubble_sort/bubble_sort.h"
+#include "algorithms/sort/heap_sort/heap_sort.h"
+#include "algorithms/sort/quick_sort/quick_sort.h"
+#include "algorithms/sort/counting_sort/counting_sort.h"
+#include "algorithms/sort/radix_sort/radix_sort.h"
+#include "algorithms/sort/bucket_sort/bucket_sort.h"
 
 // Search
-#include "linear_search/linear_search.h"
-#include "binary_search/binary_search.h"
+#include "algorithms/search/linear_search/linear_search.h"
+#include "algorithms/search/binary_search/binary_search.h"
 
 // Data structures
 
 // Heap
-#include "heap/heap.h"
-#include "priority_queue/priority_queue.h"
+#include "data-structures/heap/heap.h"
+#include "data-structures/priority_queue/priority_queue.h"
 
 #endif // TEST_H

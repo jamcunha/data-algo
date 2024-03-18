@@ -1,7 +1,12 @@
 #include "heap.h"
 
 #include <stdlib.h>
-#include "../utils/utils.h"
+
+static void swap(int* a, int* b) {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
 
 heap_t* heap_create(int capacity, bool (*compare)(int, int)) {
     heap_t* heap = malloc(sizeof(heap_t));

@@ -1,5 +1,10 @@
 #include "bubble_sort.h"
-#include "../utils/utils.h"
+
+static void swap(int *a, int *b) {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
 
 void bubble_sort(int *array, int size) {
     for (int i = 0; i < size; i++) {
