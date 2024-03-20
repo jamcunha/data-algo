@@ -7,6 +7,4 @@ WORKDIR /app
 
 COPY . .
 
-RUN make
-
-CMD ["./bin/test"]
+CMD ["make"]
