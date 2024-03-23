@@ -11,7 +11,7 @@ with other data structures, for example a BST.
 
 ### Insertion and Deletion
 
-Insertion and Deletion in a Priority Queue is similar to a [Heap](/heap/README.md)
+Insertion and Deletion in a Priority Queue is similar to a [Heap](/data-structures/heap/README.md)
 with the only difference in heapifying based on the priority.
 
 ### Peek

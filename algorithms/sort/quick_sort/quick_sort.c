@@ -44,8 +44,8 @@ static int hoare_partition(int *arr, int low, int high) {
 
 void quick_sort(int *arr, int low, int high) {
     if (low < high) {
-        int pi = hoare_partition(arr, low, high);
-        quick_sort(arr, low, pi - 1);
-        quick_sort(arr, pi + 1, high);
+        int pivot = hoare_partition(arr, low, high);
+        quick_sort(arr, low, pivot - 1);
+        quick_sort(arr, pivot + 1, high);
     }
 }
