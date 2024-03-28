@@ -24,3 +24,4 @@ This repository contains common algorithms and data structures implementations.
 - [Heap](./data-structures/heap/README.md)
 - [Priority Queue](./data-structures/priority_queue/README.md)
 - [Stack](./data-structures/stack/README.md)
+- [Queue](./data-structures/queue/README.md)

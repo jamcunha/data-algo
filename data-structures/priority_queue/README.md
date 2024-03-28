@@ -1,6 +1,6 @@
 # Priority Queue
 
-A Priority Queue is similar to a regular [Queue](TODO), having a priority
+A Priority Queue is similar to a regular [Queue](/data-structures/queue/README.md), having a priority
 associated with each element where, in case of a Min-Priority Queue, the
 element with the least priority is served first.
 
