@@ -1,4 +1,4 @@
-FROM ubuntu:22.04 AS build-env
+FROM ubuntu:22.04
 
 RUN apt-get update -y
 RUN apt-get install -y build-essential libcriterion-dev
@@ -7,4 +7,6 @@ WORKDIR /app
 
 COPY . .
 
-CMD ["make"]
+RUN make
+
+CMD ["make", "test"]

@@ -5,24 +5,24 @@ This repository contains common algorithms and data structures implementations.
 ## Algorithms
 
 - Sorting
-    - [Insertion Sort](./algorithms/sort/insertion_sort/README.md)
-    - [Selection Sort](./algorithms/sort/selection_sort/README.md)
-    - [Merge Sort](./algorithms/sort/merge_sort/README.md)
-    - [Bubble Sort](./algorithms/sort/bubble_sort/README.md)
-    - [Heap Sort](./algorithms/sort/heap_sort/README.md)
-    - [Quick Sort](./algorithms/sort/quick_sort/README.md)
-    - [Counting Sort](./algorithms/sort/counting_sort/README.md)
-    - [Radix Sort](./algorithms/sort/radix_sort/README.md)
-    - [Bucket Sort](./algorithms/sort/bucket_sort/README.md)
+    - [Insertion Sort](./algorithms/sort/insertion_sort)
+    - [Selection Sort](./algorithms/sort/selection_sort)
+    - [Merge Sort](./algorithms/sort/merge_sort)
+    - [Bubble Sort](./algorithms/sort/bubble_sort)
+    - [Heap Sort](./algorithms/sort/heap_sort)
+    - [Quick Sort](./algorithms/sort/quick_sort)
+    - [Counting Sort](./algorithms/sort/counting_sort)
+    - [Radix Sort](./algorithms/sort/radix_sort)
+    - [Bucket Sort](./algorithms/sort/bucket_sort)
 
 - Searching
-    - [Linear Search](./algorithms/search/linear_search/README.md)
-    - [Binary Search](./algorithms/search/binary_search/README.md)
+    - [Linear Search](./algorithms/search/linear_search)
+    - [Binary Search](./algorithms/search/binary_search)
 
 ## Data Structures
 
-- [Heap](./data-structures/heap/README.md)
-- [Priority Queue](./data-structures/priority_queue/README.md)
-- [Stack](./data-structures/stack/README.md)
-- [Queue](./data-structures/queue/README.md)
-- [Single Linked List](./data-structures/single_linked_list/README.md)
+- [Heap](./data-structures/heap)
+- [Priority Queue](./data-structures/priority_queue)
+- [Stack](./data-structures/stack)
+- [Queue](./data-structures/queue)
+- [Single Linked List](./data-structures/single_linked_list)

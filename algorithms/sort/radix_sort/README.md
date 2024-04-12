@@ -2,7 +2,7 @@
 
 Radix sort is a linear sorting algorithm, sorting elements digit by digit,
 using a stable sorting algorithm (in this implementation,
-[counting sort](/algorithms/sort/counting_sort/README.md)).
+[counting sort](/algorithms/sort/counting_sort)).
 
 ## Example
 

@@ -1,6 +1,6 @@
 # Priority Queue
 
-A Priority Queue is similar to a regular [Queue](/data-structures/queue/README.md), having a priority
+A Priority Queue is similar to a regular [Queue](/data-structures/queue), having a priority
 associated with each element where, in case of a Min-Priority Queue, the
 element with the least priority is served first.
 
@@ -11,7 +11,7 @@ with other data structures, for example a BST.
 
 ### Insertion and Deletion
 
-Insertion and Deletion in a Priority Queue is similar to a [Heap](/data-structures/heap/README.md)
+Insertion and Deletion in a Priority Queue is similar to a [Heap](/data-structures/heap)
 with the only difference in heapifying based on the priority.
 
 ### Peek

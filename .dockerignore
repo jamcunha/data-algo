@@ -1,0 +1,7 @@
+.git
+.cache
+assets/
+.gitignore
+Dockerfile
+compile_commands.json
+*.md
