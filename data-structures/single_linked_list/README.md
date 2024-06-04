@@ -5,7 +5,7 @@ elements in which every element has a link to the next element in the sequence.
 
 ![Single Linked List Example](/assets/single-linked-list.png)
 
-Another type of linked list is the [double linked list](TODO),
+Another type of linked list is the [double linked list](/data-structures/double-linked-list/README.md),
 which is also talked about in this repository.
 
 ## Operations
@@ -24,8 +24,10 @@ list without needing to iterate over the list, having only a node reference.
 To delete an element in a single linked list is needed to find the
 previous node of the node to be deleted and link it to the next node.
 
-The deletion is O(1) because we can delete the next node of a given node
-without needing to iterate over the list.
+The deletion is O(n) because to delete a node, we need to iterate over the
+list to find the previous node to update it's next reference.
+
+We can remove the next node of a given node in O(1).
 
 ### Access
 
@@ -43,6 +45,6 @@ iterating over all the nodes in the list if the element is not found.
 |  Operation  |   Average   |
 |:-----------:|:-----------:|
 | Insertion   | O(1)        |
-| Deletion    | O(1)        |
+| Deletion    | O(n)        |
 | Access      | O(n)        |
 | Search      | O(n)        |

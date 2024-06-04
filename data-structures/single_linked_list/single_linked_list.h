@@ -20,6 +20,8 @@ void sll_insert(sll_t* list, int data);
 
 void sll_delete(sll_t* list, int data);
 
+void sll_delete_node(sll_t* list, sll_node_t* node);
+
 sll_node_t* sll_get(sll_t* list, int index);
 
 sll_node_t* sll_find(sll_t* list, int data);

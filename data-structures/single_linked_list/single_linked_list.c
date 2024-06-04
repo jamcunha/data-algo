@@ -80,6 +80,32 @@ void sll_delete(sll_t* list, int data) {
     list->size--;
 }
 
+void sll_delete_node(sll_t* list, sll_node_t* node) {
+    sll_node_t* start = list->head;
+    if (start == node) {
+        list->head = start->next;
+        list->size--; free(start);
+
+        if (list->head == NULL) {
+            list->tail = NULL;
+        }
+
+        return;
+    }
+
+    sll_node_t* prev = start;
+    start = start->next;
+    while (start != NULL && start != node) {
+        prev = start; start = start->next;
+    }
+
+    if (start == NULL) return;
+
+    prev->next = start->next;
+    free(start);
+    list->size--;
+}
+
 sll_node_t* sll_get(sll_t* list, int index) {
     sll_node_t* node = list->head;
     for (int i = 0; i < index && node != NULL; i++) {

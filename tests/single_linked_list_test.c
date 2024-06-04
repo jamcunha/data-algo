@@ -65,6 +65,18 @@ Test(single_linked_list, sll_delete) {
     cr_assert_eq(list->size, 0, "sll_delete() failed");
 }
 
+Test(single_linked_list, sll_delete_node) {
+    sll_insert(list, 1);
+    sll_insert(list, 2);
+    sll_insert(list, 3);
+
+    sll_node_t* node = sll_find(list, 2);
+    sll_delete_node(list, node);
+    cr_assert_eq(list->head->data, 1, "sll_delete_node() failed");
+    cr_assert_eq(list->tail->data, 3, "sll_delete_node() failed");
+    cr_assert_eq(list->size, 2, "sll_delete_node() failed");
+}
+
 Test(single_linked_list, sll_get) {
     sll_insert(list, 1);
     sll_insert(list, 2);
