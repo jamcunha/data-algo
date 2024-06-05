@@ -12,14 +12,14 @@ OBJS = $(addprefix $(OBJDIR)/,$(notdir $(SRCS:.c=.o)))
 TEST_SRCS = $(wildcard tests/*.c)
 TEST_BINS = $(patsubst tests/%_test.c,$(BINDIR)/%,$(TEST_SRCS))
 
-.PHONY: all test clean docker
+.PHONY: all test clean docker-test
 
 all: $(OBJDIR) $(BINDIR) $(OBJS) $(TEST_BINS)
 
 test: all
 	@for test in $(TEST_BINS); do ./$$test; done
 
-docker:
+docker-test:
 	docker build -t test .
 	docker run -it --rm test
 

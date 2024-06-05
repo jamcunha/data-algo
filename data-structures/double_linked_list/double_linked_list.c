@@ -35,8 +35,14 @@ void dll_prepend(dll_t* list, int data) {
     dll_node_t* head = list->head;
 
     node->next = head;
-    head->prev = node;
+
+    if (head != NULL) {
+        head->prev = node;
+    } else {
+        list->tail = node;
+    }
     list->head = node;
+    list->size++;
 }
 
 void dll_insert(dll_t* list, int data) {
@@ -44,8 +50,13 @@ void dll_insert(dll_t* list, int data) {
     dll_node_t* tail = list->tail;
 
     node->prev = tail;
-    tail->next = node;
+    if (tail != NULL) {
+        tail->next = node;
+    } else {
+        list->head = node;
+    }
     list->tail = node;
+    list->size++;
 }
 
 void dll_delete(dll_t* list, int data) {
