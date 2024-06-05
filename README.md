@@ -27,3 +27,4 @@ This repository contains common algorithms and data structures implementations.
 - [Queue](./data-structures/queue)
 - [Single Linked List](./data-structures/single_linked_list)
 - [Double Linked List](./data-structures/double_linked_list)
+- [Hash Table](./data-structures/hash_table)
