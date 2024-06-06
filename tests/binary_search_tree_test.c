@@ -1,6 +1,8 @@
 #include <criterion/criterion.h>
 #include "../data-structures/binary_search_tree/binary_search_tree.h"
 
+// TODO: Add more in-depth tests
+
 bst_t* tree;
 
 void setup(void) {
@@ -44,7 +46,7 @@ Test(binary_search_tree, remove) {
     bst_insert(tree, 10);
     bst_insert(tree, 7);
 
-    bst_remove(tree, 10);
+    bst_delete(tree, 10);
 
     bst_node_t* node = tree->root;
 

@@ -1,6 +1,6 @@
 # Double Linked List
 
-A double linked list is similar to a [single linked list](/data-structures/single-linked-list/README.md),
+A double linked list is similar to a [single linked list](/data-structures/single-linked-list),
 with the difference that each node has one more link to the previous node.
 
 ![Double Linked List Example](/assets/double-linked-list.png)

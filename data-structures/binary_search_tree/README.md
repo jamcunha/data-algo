@@ -12,7 +12,7 @@ since it's layout allow comparison that skips half of the remaining tree at each
 The performance of a BST is dependent on the balance of the tree.
 When unbalanced, the tree can degrade to a linked list, which would make the performance linear.
 
-To solve this issue, there are self-balancing trees, such as [AVL](TODO) and [Red-Black trees](TODO).
+To solve this issue, there are self-balancing trees, such as [AVL](TODO) and [Red-Black trees](/data-structures/rb_tree).
 
 ![Binary Search Tree](/assets/bst.png)
 

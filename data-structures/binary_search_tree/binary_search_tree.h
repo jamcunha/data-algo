@@ -19,7 +19,7 @@ bst_t* bst_create(void);
 
 void bst_insert(bst_t* tree, int data);
 
-void bst_remove(bst_t* tree, int data);
+void bst_delete(bst_t* tree, int data);
 
 bool bst_search(bst_t* tree, int data);
 

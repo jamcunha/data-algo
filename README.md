@@ -29,3 +29,4 @@ This repository contains common algorithms and data structures implementations.
 - [Double Linked List](./data-structures/double_linked_list)
 - [Hash Table](./data-structures/hash_table)
 - [Binary Search Tree](./data-structures/binary_search_tree)
+- [Red-Black Tree](./data-structures/rb_tree)

@@ -191,7 +191,7 @@ void bst_insert(bst_t* tree, int data) {
     tree->size++;
 }
 
-void bst_remove(bst_t* tree, int data) {
+void bst_delete(bst_t* tree, int data) {
     if (tree == NULL) {
         return;
     }
@@ -235,7 +235,9 @@ void bst_remove(bst_t* tree, int data) {
 
         successor->parent = node->parent;
 
-        if (node->parent->left == node) {
+        if (node->parent == NULL) {
+            tree->root = successor;
+        } else if (node->parent->left == node) {
             node->parent->left = successor;
         } else {
             node->parent->right = successor;

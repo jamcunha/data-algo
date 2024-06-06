@@ -5,7 +5,7 @@ elements in which every element has a link to the next element in the sequence.
 
 ![Single Linked List Example](/assets/single-linked-list.png)
 
-Another type of linked list is the [double linked list](/data-structures/double-linked-list/README.md),
+Another type of linked list is the [double linked list](/data-structures/double-linked-list),
 which is also talked about in this repository.
 
 ## Operations
