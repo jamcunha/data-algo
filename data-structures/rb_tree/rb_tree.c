@@ -351,6 +351,8 @@ void rb_delete(rb_tree_t* tree, int data) {
 
         free(x_backup);
     }
+
+    tree->size--;
 }
 
 bool rb_search(rb_tree_t* tree, int data) {
