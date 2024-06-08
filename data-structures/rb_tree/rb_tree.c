@@ -217,18 +217,21 @@ void rb_insert(rb_tree_t* tree, int data) {
         return;
     }
 
-    rb_node_t* node = create_node(data);
 
     rb_node_t* parent = NULL;
     for (rb_node_t* current = tree->root; current != NULL;) {
         parent = current;
-        if (node->data < current->data) {
+        if (data == current->data) {
+            // do not insert duplicate
+            return;
+        } else if (data < current->data) {
             current = current->left;
         } else {
             current = current->right;
         }
     }
 
+    rb_node_t* node = create_node(data);
     node->parent = parent;
 
     if (parent == NULL) {

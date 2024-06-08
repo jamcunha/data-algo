@@ -30,3 +30,4 @@ This repository contains common algorithms and data structures implementations.
 - [Hash Table](./data-structures/hash_table)
 - [Binary Search Tree](./data-structures/binary_search_tree)
 - [Red-Black Tree](./data-structures/rb_tree)
+- [AVL Tree](./data-structures/avl_tree)

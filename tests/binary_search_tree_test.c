@@ -40,6 +40,18 @@ Test(binary_search_tree, insert) {
     cr_assert_eq(node->right->data, 4, "Node right child data should be 4, got %d", node->right->data);
 }
 
+Test(binary_search_tree, insert_duplicate) {
+    bst_insert(tree, 5);
+    bst_insert(tree, 5);
+
+    bst_node_t* node = tree->root;
+
+    cr_assert_not_null(node, "Node should not be NULL");
+    cr_assert_eq(node->data, 5, "Node data should be 5, got %d", node->data);
+    cr_assert_null(node->left, "Node left child should be NULL");
+    cr_assert_null(node->right, "Node right child should be NULL");
+}
+
 Test(binary_search_tree, remove) {
     bst_insert(tree, 5);
     bst_insert(tree, 2);

@@ -20,13 +20,13 @@ test: all
 	@for test in $(TEST_BINS); do ./$$test; done
 
 docker-test:
-	docker build -t test .
-	docker run -it --rm test
+	docker build -t dsna-test .
+	docker run -it --rm dsna-test
 
 clean:
 	rm -rf $(OBJDIR)
 	rm -rf $(BINDIR)
-	docker rmi test
+	docker rmi dsna-test 2> /dev/null || true
 
 $(BINDIR)/%: $(OBJDIR)/%.o
 	$(CC) $(CFLAGS) $< tests/$*_test.c -o $@ -lcriterion

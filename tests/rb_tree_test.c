@@ -28,6 +28,17 @@ Test(rb_tree, insert) {
     cr_assert_eq(tree->root->color, BLACK);
 }
 
+Test(rb_tree, insert_duplicate) {
+    rb_insert(tree, 10);
+    rb_insert(tree, 10);
+
+    cr_assert_not_null(tree->root);
+    cr_assert_eq(tree->root->data, 10);
+    cr_assert_eq(tree->root->color, BLACK);
+    cr_assert_null(tree->root->left);
+    cr_assert_null(tree->root->right);
+}
+
 Test(rb_tree, insert_with_fixup) {
     rb_insert(tree, 5);
     rb_insert(tree, 10);

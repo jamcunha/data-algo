@@ -14,6 +14,11 @@ static bst_node_t* create_node(int data) {
 }
 
 static void insert(bst_node_t* root, int data) {
+    if (data == root->data) {
+        // do not insert duplicates
+        return;
+    }
+
     if (data < root->data) {
         if (root->left == NULL) {
             root->left = create_node(data);
@@ -203,18 +208,8 @@ void bst_delete(bst_t* tree, int data) {
 
     if (node->left == NULL) {
         transplant(tree, node, node->right);
-
-        if (node->right != NULL) {
-            node->right->parent = node->parent;
-            node->parent->left = node->right;
-        }
     } else if (node->right == NULL) {
         transplant(tree, node, node->left);
-
-        if (node->left != NULL) {
-            node->left->parent = node->parent;
-            node->parent->right = node->left;
-        }
     } else {
         bst_node_t* successor = min(node->right);
 
@@ -223,6 +218,8 @@ void bst_delete(bst_t* tree, int data) {
         // and assign node's right child to successor's right child
         if (successor->parent != node) {
             transplant(tree, successor, successor->right);
+
+            // TODO: check what links are necessary
             successor->right = node->right;
             successor->right->parent = successor;
 
@@ -230,18 +227,9 @@ void bst_delete(bst_t* tree, int data) {
         }
 
         transplant(tree, node, successor);
+        // TODO: check if this is necessary
         successor->left = node->left;
         successor->left->parent = successor;
-
-        successor->parent = node->parent;
-
-        if (node->parent == NULL) {
-            tree->root = successor;
-        } else if (node->parent->left == node) {
-            node->parent->left = successor;
-        } else {
-            node->parent->right = successor;
-        }
     }
 
     free(node);
