@@ -2,6 +2,10 @@
 
 This repository contains common algorithms and data structures implementations.
 
+> [!NOTE]
+> The tests provided are not exhaustive. They are meant to be a playground for the implementations.
+> Some implementations may have hidden bugs or edge cases that are not covered by the tests.
+
 ## Algorithms
 
 - Sorting

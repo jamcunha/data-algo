@@ -1,5 +1,5 @@
 {
-  description = "C/C++ Developer Environment";
+  description = "C/C++ Development Environment";
 
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
