@@ -5,6 +5,10 @@ This repository contains common algorithms and data structures implementations.
 > [!NOTE]
 > The tests provided are not exhaustive. They are meant to be a playground for the implementations.
 > Some implementations may have hidden bugs or edge cases that are not covered by the tests.
+>
+> Also, the explainations might not be very detailed since the objective of this project
+> is for me to learn and practice the implementations. In the future I might add more detailed
+> explainations as well as improvements to the implementations.
 
 ## Algorithms
 
@@ -35,3 +39,4 @@ This repository contains common algorithms and data structures implementations.
 - [Binary Search Tree](./data-structures/binary_search_tree)
 - [Red-Black Tree](./data-structures/rb_tree)
 - [AVL Tree](./data-structures/avl_tree)
+- [Interval Tree](./data-structures/interval_tree)

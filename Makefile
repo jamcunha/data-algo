@@ -12,17 +12,19 @@ OBJS = $(addprefix $(OBJDIR)/,$(notdir $(SRCS:.c=.o)))
 TEST_SRCS = $(wildcard tests/*.c)
 TEST_BINS = $(patsubst tests/%_test.c,$(BINDIR)/%,$(TEST_SRCS))
 
-.PHONY: all test clean docker-test
-
+.PHONY: all
 all: $(OBJDIR) $(BINDIR) $(OBJS) $(TEST_BINS)
 
+.PHONY: test
 test: all
 	@for test in $(TEST_BINS); do ./$$test; done
 
+.PHONY: docker-test
 docker-test:
 	docker build -t dsna-test .
 	docker run -it --rm dsna-test
 
+.PHONY: clean
 clean:
 	rm -rf $(OBJDIR)
 	rm -rf $(BINDIR)
