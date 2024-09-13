@@ -17,7 +17,7 @@ all: $(OBJDIR) $(BINDIR) $(OBJS) $(TEST_BINS)
 
 .PHONY: test
 test: all
-	@for test in $(TEST_BINS); do ./$$test; done
+	@for test in $(TEST_BINS); do ./$$test ; done
 
 .PHONY: docker-test
 docker-test:
