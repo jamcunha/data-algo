@@ -47,3 +47,4 @@ This repository contains common algorithms and data structures implementations.
 - [AVL Tree](./data-structures/avl_tree)
 - [Interval Tree](./data-structures/interval_tree)
 - [B-Tree](./data-structures/b_tree)
+- [Disjoint Set](./data-structures/disjoint_set)
