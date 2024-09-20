@@ -48,3 +48,4 @@ This repository contains common algorithms and data structures implementations.
 - [Interval Tree](./data-structures/interval_tree)
 - [B-Tree](./data-structures/b_tree)
 - [Disjoint Set](./data-structures/disjoint_set)
+- [Graph] (./data-structures/graph)
