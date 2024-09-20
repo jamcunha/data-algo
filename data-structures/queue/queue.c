@@ -1,5 +1,7 @@
 #include "queue.h"
 
+#include <assert.h>
+#include <limits.h>
 #include <stdlib.h>
 
 queue_t* queue_create(void) {
@@ -22,16 +24,19 @@ queue_t* queue_create(void) {
 }
 
 bool queue_is_empty(queue_t *queue) {
+    assert(queue != NULL);
+
     return queue->head == queue->tail;
 }
 
-bool queue_enqueue(queue_t *queue, int value) {
+void queue_enqueue(queue_t *queue, int value) {
+    assert(queue != NULL);
+
     if (queue->tail == queue->capacity) {
+        assert(queue->capacity < INT_MAX / 2);
+
         int new_capacity = queue->capacity * 2;
         int *new_data = (int*)malloc(sizeof(int) * new_capacity);
-        if (new_data == NULL) {
-            return false;
-        }
 
         for (int i = 0; i < queue->tail - queue->head; i++) {
             new_data[i] = queue->data[queue->head + i];
@@ -45,22 +50,17 @@ bool queue_enqueue(queue_t *queue, int value) {
     }
 
     queue->data[queue->tail++] = value;
-    return true;
 }
 
-bool queue_dequeue(queue_t *queue, int *value) {
-    if (queue_is_empty(queue)) {
-        return false;
-    }
+int queue_dequeue(queue_t *queue) {
+    assert(queue != NULL);
+    assert(!queue_is_empty(queue));
 
-    *value = queue->data[queue->head++];
-    return true;
+    return queue->data[queue->head++];
 }
 
 void queue_destroy(queue_t *queue) {
-    if (queue == NULL) {
-        return;
-    }
+    assert(queue != NULL);
 
     free(queue->data);
     free(queue);

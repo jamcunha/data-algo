@@ -21,7 +21,7 @@ Test(queue, queue_init, .init = test_setup, .fini = test_teardown) {
 
 Test(queue, queue_push, .init = test_setup, .fini = test_teardown) {
     for (int i = 0; i < 10; i++) {
-        cr_assert(queue_enqueue(queue, i), "queue_enqueue() failed");
+        queue_enqueue(queue, i);
     }
 
     cr_assert_eq(queue->tail, 10, "queue_enqueue() failed");
@@ -32,15 +32,10 @@ Test(queue, queue_push, .init = test_setup, .fini = test_teardown) {
 
 Test(queue, queue_push_resize, .init = test_setup, .fini = test_teardown) {
     for (int i = 0; i < 10; i++) {
-        cr_assert(queue_enqueue(queue, i), "queue_enqueue() failed");
+        queue_enqueue(queue, i);
     }
 
-    cr_assert_eq(queue->tail, 10, "queue_enqueue() failed");
-    for (int i = 0; i < 10; i++) {
-        cr_assert_eq(queue->data[i], i, "queue_enqueue() failed");
-    }
-
-    cr_assert(queue_enqueue(queue, 10), "queue_enqueue() failed");
+    queue_enqueue(queue, 10);
     cr_assert_eq(queue->tail, 11, "queue_enqueue() failed");
     cr_assert_eq(queue->capacity, QUEUE_INIT_CAPACITY * 2, "queue_enqueue() failed");
     for (int i = 0; i < 11; i++) {
@@ -50,18 +45,11 @@ Test(queue, queue_push_resize, .init = test_setup, .fini = test_teardown) {
 
 Test(queue, queue_pop, .init = test_setup, .fini = test_teardown) {
     for (int i = 0; i < 10; i++) {
-        cr_assert(queue_enqueue(queue, i), "queue_enqueue() failed");
+        queue_enqueue(queue, i);
     }
 
-    cr_assert_eq(queue->tail, 10, "queue_enqueue() failed");
     for (int i = 0; i < 10; i++) {
-        cr_assert_eq(queue->data[i], i, "queue_enqueue() failed");
-    }
-
-    int value;
-    for (int i = 0; i < 10; i++) {
-        cr_assert(queue_dequeue(queue, &value), "queue_dequeue() failed");
-        cr_assert_eq(value, i, "queue_dequeue() failed");
+        cr_assert_eq(queue_dequeue(queue), i, "queue_dequeue() failed");
         cr_assert_eq(queue->head, i + 1, "queue_dequeue() failed");
     }
 

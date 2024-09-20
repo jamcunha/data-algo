@@ -33,6 +33,9 @@ This repository contains common algorithms and data structures implementations.
     - [Linear Search](./algorithms/search/linear_search)
     - [Binary Search](./algorithms/search/binary_search)
 
+- Graph
+    - [Breadth First Search](./algorithms/graph/bfs)
+
 ## Data Structures
 
 - [Heap](./data-structures/heap)

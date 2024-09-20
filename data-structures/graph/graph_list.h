@@ -1,11 +1,14 @@
 #ifndef GRAPH_LIST_H
 #define GRAPH_LIST_H
 
+#include <stdbool.h>
+
 typedef struct vertex {
     int id;
     struct vertex *next;
 
     // optional fields for algorithms
+    bool visited;
 } vertex_t;
 
 typedef struct {

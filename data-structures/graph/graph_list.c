@@ -10,6 +10,8 @@ static vertex_t *vertex_create(int id) {
     vertex->id = id;
     vertex->next = NULL;
 
+    vertex->visited = false;
+
     return vertex;
 }
 
