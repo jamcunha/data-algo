@@ -20,7 +20,7 @@ Test(stack, stack_init, .init = test_setup, .fini = test_teardown) {
 
 Test(stack, stack_push, .init = test_setup, .fini = test_teardown) {
     for (int i = 0; i < 10; i++) {
-        cr_assert(stack_push(stack, i), "stack_push() failed");
+        stack_push(stack, i);
     }
 
     cr_assert_eq(stack->top, 10, "stack_push() failed");
@@ -31,15 +31,10 @@ Test(stack, stack_push, .init = test_setup, .fini = test_teardown) {
 
 Test(stack, stack_push_resize, .init = test_setup, .fini = test_teardown) {
     for (int i = 0; i < 10; i++) {
-        cr_assert(stack_push(stack, i), "stack_push() failed");
+        stack_push(stack, i);
     }
 
-    cr_assert_eq(stack->top, 10, "stack_push() failed");
-    for (int i = 0; i < 10; i++) {
-        cr_assert_eq(stack->data[i], i, "stack_push() failed");
-    }
-
-    cr_assert(stack_push(stack, 10), "stack_push() failed");
+    stack_push(stack, 10);
     cr_assert_eq(stack->top, 11, "stack_push() failed");
     cr_assert_eq(stack->capacity, STACK_INIT_CAPACITY * 2, "stack_push() failed");
     for (int i = 0; i < 11; i++) {
@@ -49,19 +44,12 @@ Test(stack, stack_push_resize, .init = test_setup, .fini = test_teardown) {
 
 Test(stack, stack_pop, .init = test_setup, .fini = test_teardown) {
     for (int i = 0; i < 10; i++) {
-        cr_assert(stack_push(stack, i), "stack_push() failed");
+        stack_push(stack, i);
     }
 
-    cr_assert_eq(stack->top, 10, "stack_push() failed");
     for (int i = 0; i < 10; i++) {
-        cr_assert_eq(stack->data[i], i, "stack_push() failed");
-    }
-
-    int value;
-    for (int i = 0; i < 10; i++) {
-        cr_assert(stack_top(stack, &value), "stack_top() failed");
-        cr_assert_eq(value, 9 - i, "stack_top() failed");
-        cr_assert(stack_pop(stack), "stack_pop() failed");
+        cr_assert_eq(stack_top(stack), 9 - i, "stack_top() failed");
+        stack_pop(stack);
     }
 
     cr_assert_eq(stack->top, 0, "stack_pop() failed");

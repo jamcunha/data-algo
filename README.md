@@ -35,6 +35,7 @@ This repository contains common algorithms and data structures implementations.
 
 - Graph
     - [Breadth First Search](./algorithms/graph/bfs)
+    - [Depth First Search](./algorithms/graph/dfs)
 
 ## Data Structures
 

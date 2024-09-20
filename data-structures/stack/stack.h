@@ -13,11 +13,11 @@ typedef struct {
 
 stack_t* stack_create(void);
 
-bool stack_push(stack_t *stack, int value);
+void stack_push(stack_t *stack, int value);
 
-bool stack_pop(stack_t *stack);
+void stack_pop(stack_t *stack);
 
-bool stack_top(stack_t *stack, int *value);
+int stack_top(stack_t *stack);
 
 bool is_stack_empty(stack_t *stack);
 

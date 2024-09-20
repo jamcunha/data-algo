@@ -1,5 +1,6 @@
 #include "stack.h"
 
+#include <assert.h>
 #include <stdlib.h>
 
 stack_t* stack_create(void) {
@@ -20,49 +21,38 @@ stack_t* stack_create(void) {
 }
 
 void stack_destroy(stack_t* stack) {
-    if (stack == NULL) {
-        return;
-    }
+    assert(stack != NULL);
 
     free(stack->data);
     free(stack);
 }
 
-bool stack_push(stack_t* stack, int value) {
-    if (stack == NULL) {
-        return false;
-    }
+void stack_push(stack_t* stack, int value) {
+    assert(stack != NULL);
 
     if (stack->top == stack->capacity) {
         stack->capacity *= 2;
         stack->data = (int*)realloc(stack->data, stack->capacity * sizeof(int));
-        if (stack->data == NULL) {
-            return false;
-        }
     }
 
     stack->data[stack->top++] = value;
-    return true;
 }
 
-bool stack_pop(stack_t* stack) {
-    if (is_stack_empty(stack)) {
-        return false;
-    }
+void stack_pop(stack_t* stack) {
+    assert(stack != NULL);
+    assert(!is_stack_empty(stack));
 
     stack->top--;
-    return true;
 }
 
-bool stack_top(stack_t* stack, int* value) {
-    if (is_stack_empty(stack)) {
-        return false;
-    }
+int stack_top(stack_t* stack) {
+    assert(stack != NULL);
 
-    *value = stack->data[stack->top - 1];
-    return true;
+    return stack->data[stack->top - 1];
 }
 
 bool is_stack_empty(stack_t* stack) {
-    return stack == NULL || stack->top == 0;
+    assert(stack != NULL);
+
+    return stack->top == 0;
 }
